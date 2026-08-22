@@ -8,6 +8,10 @@
 
 <title>🧩 De mi para ti ❤️</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -19,7 +23,7 @@
 <audio id="bgMusic" loop>
     <source src="assets/music/romantic.mp3" type="audio/mpeg">
 </audio>
-<button id="musicBtn">
+<button id="musicBtn" aria-label="Silenciar o activar música de fondo" aria-pressed="true">
     🎵
 </button>
 
@@ -63,18 +67,18 @@
 
     <div class="gallery-container">
 
-        <div class="polaroid" onclick="showMemory(1)">
-            <img src="assets/photos/foto1.jpg">
+        <div class="polaroid" onclick="showMemory(1)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')showMemory(1)">
+            <img src="assets/photos/foto1.jpg" alt="El inicio de todo">
             <p>El inicio de todo</p>
         </div>
 
-        <div class="polaroid" onclick="showMemory(2)">
-            <img src="assets/photos/foto2.jpg">
+        <div class="polaroid" onclick="showMemory(2)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')showMemory(2)">
+            <img src="assets/photos/foto2.jpg" alt="Un momento único">
             <p>Un momento unico</p>
         </div>
 
-        <div class="polaroid" onclick="showMemory(3)">
-            <img src="assets/photos/foto3.jpg">
+        <div class="polaroid" onclick="showMemory(3)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')showMemory(3)">
+            <img src="assets/photos/foto3.jpg" alt="Una historia juntos">
             <p>Una historia juntos</p>
         </div>
 
@@ -105,33 +109,39 @@
 
         <div class="cities">
 
-    <div class="city">
-        <h3>📍 El Carmen de Bolívar</h3>
-        <p>Donde alguien comenzó a soñar contigo.</p>
-    </div>
+            <div class="city">
+                <h3>📍 El Carmen de Bolívar</h3>
+                <p>Donde alguien comenzó a soñar contigo.</p>
+            </div>
 
-    <div class="connection">
+            <div class="connection">
 
-        <div class="heart-line">
-            ❤️
+                <div class="heart-line">
+                    ❤️
+                </div>
+
+                <div class="line"></div>
+
+            </div>
+
+            <div class="city">
+                <h3>📍 Floridablanca</h3>
+                <p>Donde estaba la mujer que cambiaría mi vida.</p>
+            </div>
+
         </div>
 
-        <div class="line"></div>
+        <div class="next-section">
+
+            <button onclick="showAdmiration()">
+                Lo que admiro de ti 🌼
+            </button>
+
+        </div>
 
     </div>
 
-    <div class="city">
-        <h3>📍 Floridablanca</h3>
-        <p>Donde estaba la mujer que cambiaría mi vida.</p>
-    </div>
-
-    <div class="next-section">
-
-    <button onclick="showAdmiration()">
-        Lo que admiro de ti 🌼
-    </button>
-
-</div>
+</section>
 
 <section id="admiration" style="display:none;">
 
@@ -367,8 +377,6 @@
 
 </section>
 
-</section>
-
 <section id="ending" style="display:none;">
 
     <div class="ending-content">
@@ -417,18 +425,13 @@
 
 </section>
 
-</div>
-    
-
-</section>
-
 <div id="memoryModal" class="modal" style="display:none;">
 
     <div class="modal-content">
 
-        <span class="close" onclick="closeMemory()">
+        <button class="close" onclick="closeMemory()" aria-label="Cerrar">
             ✖
-        </span>
+        </button>
 
         <h3 id="memoryTitle"></h3>
 
@@ -444,10 +447,11 @@
 
     <div class="modal-content">
 
-        <span class="close"
-              onclick="closeFinalLetter()">
+        <button class="close"
+              onclick="closeFinalLetter()"
+              aria-label="Cerrar">
             ✖
-        </span>
+        </button>
 
         <h2>💌 Una última carta para ti</h2>
 
