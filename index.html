@@ -1,512 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>🧩 De mi para ti ❤️</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio Web</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<div class="sparkles"></div>
-
-<audio id="bgMusic" loop>
-    <source src="assets/music/romantic.mp3" type="audio/mpeg">
-</audio>
-<button id="musicBtn" aria-label="Silenciar o activar música de fondo" aria-pressed="true">
-    🎵
-</button>
-
-<div id="intro">
-
-    <h1 class="logo">
-        DE MI PARA TI
-    </h1>
-
-    <p class="subtitle">
-        Una historia que comenzó trabajando...
-    </p>
-
-    <button id="startBtn">
-        Comenzar ❤️
-    </button>
-
-</div>
-
-<section id="chapter1" class="hidden">
-
-    <div class="content">
-
-        <h2>
-            Capítulo 1
-        </h2>
-
-        <h3>
-            Todo comenzó trabajando
-        </h3>
-
-        <p id="typingText"></p>
-
+  <header class="hero">
+    <nav class="nav">
+      <h1 class="logo">MiSitio</h1>
+      <a class="btn" href="#contacto">Contacto</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">Plantilla inicial</p>
+      <h2>Repositorio listo para tu sitio web</h2>
+      <p>
+        Esta base incluye HTML, CSS y JavaScript para que empieces rápido.
+      </p>
+      <a class="btn" href="#servicios">Ver secciones</a>
     </div>
-
-</section>
-
-<section id="gallery" class="hidden">
-
-    <h2>Nuestros Recuerdos ❤️</h2>
-
-    <div class="gallery-container">
-
-        <div class="polaroid" onclick="showMemory(1)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')showMemory(1)">
-            <img src="assets/photos/foto1.jpg" alt="El inicio de todo">
-            <p>El inicio de todo</p>
-        </div>
-
-        <div class="polaroid" onclick="showMemory(2)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')showMemory(2)">
-            <img src="assets/photos/foto2.jpg" alt="Un momento único">
-            <p>Un momento unico</p>
-        </div>
-
-        <div class="polaroid" onclick="showMemory(3)" role="button" tabindex="0" onkeydown="if(event.key==='Enter')showMemory(3)">
-            <img src="assets/photos/foto3.jpg" alt="Una historia juntos">
-            <p>Una historia juntos</p>
-        </div>
-
-    </div>
-    <div class="next-section">
-
-        <button onclick="showDistance()">
-            Continuar nuestra historia ❤️
-        </button>
-
-    </div>
-
-</section>
-
-<section id="distance" style="display:none;">
-
-    <div class="distance-container">
-
-        <h2>La distancia ❤️</h2>
-
-        <p class="distance-text">
-
-            La distancia nos separó por kilómetros.
-
-            Pero jamás logró separarnos de corazón.
-
-        </p>
-
-        <div class="cities">
-
-            <div class="city">
-                <h3>📍 El Carmen de Bolívar</h3>
-                <p>Donde alguien comenzó a soñar contigo.</p>
-            </div>
-
-            <div class="connection">
-
-                <div class="heart-line">
-                    ❤️
-                </div>
-
-                <div class="line"></div>
-
-            </div>
-
-            <div class="city">
-                <h3>📍 Floridablanca</h3>
-                <p>Donde estaba la mujer que cambiaría mi vida.</p>
-            </div>
-
-        </div>
-
-        <div class="next-section">
-
-            <button onclick="showAdmiration()">
-                Lo que admiro de ti 🌼
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="admiration" style="display:none;">
-
-    <div class="admiration-container">
-
-        <h2>Lo que admiro de ti 🌼</h2>
-
-        <p>
-            Hay muchas cosas que amo de ti,
-            pero algunas merecen un capítulo especial.
-        </p>
-
-        <div class="cards">
-
-            <div class="card" onclick="showAdmirationCard(1)">
-                🌼 Tu paciencia
-            </div>
-
-            <div class="card" onclick="showAdmirationCard(2)">
-                ❤️ Tu forma de amar
-            </div>
-
-            <div class="card" onclick="showAdmirationCard(3)">
-                🚀 Tu fortaleza
-            </div>
-
-            <div class="card" onclick="showAdmirationCard(4)">
-                💍 Nuestro futuro
-            </div>
-
-        </div>
-
-        <div class="next-section">
-            <button onclick="showPromise()">
-                Una promesa para ti ❤️
-            </button>
-        </div>
-
-    </div>
-
-</section>
-
-    <section id="promise" style="display:none;">
-
-    <div class="promise-container">
-
-        <h2>💍 Una promesa para ti</h2>
-
-        <div class="promise-letter">
-
-            <p>
-                El 15 de marzo de 2025 comenzó nuestra historia.
-            </p>
-
-            <p>
-                No sabía exactamente cómo sería el camino.
-            </p>
-
-            <p>
-                No sabía cuántos retos vendrían.
-            </p>
-
-            <p>
-                Pero sí sabía algo:
-            </p>
-
-            <p class="highlight">
-                Que quería recorrerlo contigo.
-            </p>
-
-            <p>
-                Hoy quiero hacerte una promesa.
-            </p>
-
-            <p>
-                No te prometo una vida perfecta.
-            </p>
-
-            <p>
-                No te prometo días sin dificultades.
-            </p>
-
-            <p>
-                Te prometo que cuando lleguen,
-                los enfrentaremos juntos.
-            </p>
-
-            <p>
-                Te prometo elegirte una y otra vez.
-            </p>
-
-            <p>
-                Te prometo seguir construyendo nuestros sueños.
-            </p>
-
-            <p class="highlight">
-                Porque el 15 de marzo de 2027
-                no será el final de nuestra historia.
-            </p>
-
-            <p class="highlight">
-                Será el comienzo de una nueva etapa.
-            </p>
-
-        </div>
-
-        <button onclick="showCountdown()">
-            Nuestro gran día ❤️
-        </button>
-
-    </div>
-
-</section>
-
-<section id="countdown" style="display:none;">
-
-    <div class="countdown-container">
-
-        <h2>💍 Nuestro gran día</h2>
-
-        <p class="countdown-subtitle">
-            Cada segundo nos acerca un poco más.
-        </p>
-
-        <div class="countdown-box">
-
-            <div class="time-box">
-                <span id="days">0</span>
-                <small>Días</small>
-            </div>
-
-            <div class="time-box">
-                <span id="hours">0</span>
-                <small>Horas</small>
-            </div>
-
-            <div class="time-box">
-                <span id="minutes">0</span>
-                <small>Minutos</small>
-            </div>
-
-            <div class="time-box">
-                <span id="seconds">0</span>
-                <small>Segundos</small>
-            </div>
-
-        </div>
-
-        <h3 class="wedding-date">
-            ❤️ 15 de marzo de 2027 ❤️
-        </h3>
-
-        <button onclick="showFlower()">
-            Tengo algo más para ti 🌼
-        </button>
-
-    </div>
-
-</section>
-
-<section id="flower" style="display:none;">
-
-    <div class="flower-container">
-
-        <h2>🌼 Una flor para ti</h2>
-
-        <p class="flower-subtitle">
-            Las margaritas siempre me recuerdan a ti.
-        </p>
-
-        <div class="flower-layout">
-
-            <button class="petal-btn" onclick="showFlowerMessage(1,this)">
-                Paciente
-            </button>
-
-            <button class="petal-btn" onclick="showFlowerMessage(2,this)">
-                Amorosa
-            </button>
-
-            <button class="petal-btn" onclick="showFlowerMessage(3,this)">
-                Valiente
-            </button>
-
-            <button class="petal-btn" onclick="showFlowerMessage(4,this)">
-                Fuerte
-            </button>
-
-            <img
-                src="assets/photos/margarita.png"
-                class="flower-image"
-                alt="Margarita">
-
-            <button class="petal-btn" onclick="showFlowerMessage(5,this)">
-                Soñadora
-            </button>
-
-            <button class="petal-btn" onclick="showFlowerMessage(6,this)">
-                Mi hogar
-            </button>
-
-            <button class="petal-btn" onclick="showFlowerMessage(7,this)">
-                Mi futuro
-            </button>
-            
-            <button class="petal-btn" onclick="showFlowerMessage(8,this)">
-                Compañera
-            </button>
-
-        </div>
-
-        <div id="flowerSecret" style="display:none;">
-
-            <h3>🌼 Has descubierto todos mis pétalos 🌼</h3>
-
-                <p>
-                    Cada uno representa algo que admiro de ti.
-                    Pero ninguna palabra puede describir completamente
-                    lo mucho que significas para mí.
-                </p>
-
-                <p>
-                    ❤️ Y aún me queda algo más por decirte ❤️
-                </p>
-
-        </div>
-
-        <button onclick="showEnding()">
-            El último capítulo ❤️
-        </button>
-
-    </div>
-
-</section>
-
-<section id="ending" style="display:none;">
-
-    <div class="ending-content">
-
-        <h1 id="finalTitle" class="fade-item">
-            DE MI PARA TI ❤️
-        </h1>
-
-        <div class="timeline">
-
-            <div id="date1" class="fade-item">
-                15 de marzo de 2025
-            </div>
-
-            <div id="arrow" class="fade-item">
-                ↓
-            </div>
-
-            <div id="date2" class="fade-item">
-                15 de marzo de 2027 💍
-            </div>
-
-        </div>
-
-        <p id="finalText" class="fade-item">
-            Nuestra historia apenas comienza.
-        </p>
-
-        <p id="signature" class="fade-item">
-
-            Con amor,<br><br>
-
-            Ezequiel ❤️<br><br>
-
-            🧩 De mi para ti 🌼
-
-        </p>
-    
-        <button id="finalLetterBtn"
-                class="fade-item"
-                onclick="showFinalLetter()">
-            💌 Una última carta
-        </button>
-
-    </div>
-
-</section>
-
-<div id="memoryModal" class="modal" style="display:none;">
-
-    <div class="modal-content">
-
-        <button class="close" onclick="closeMemory()" aria-label="Cerrar">
-            ✖
-        </button>
-
-        <h3 id="memoryTitle"></h3>
-
-        <p id="memoryText"></p>
-
-    </div>
-
-</div>
-
-<div id="letterModal"
-     class="modal"
-     style="display:none;">
-
-    <div class="modal-content">
-
-        <button class="close"
-              onclick="closeFinalLetter()"
-              aria-label="Cerrar">
-            ✖
-        </button>
-
-        <h2>💌 Una última carta para ti</h2>
-
-        <div class="letter-content">
-
-            <p>
-                Mi amor,
-            </p>
-
-            <p>
-                Gracias por aparecer en mi vida cuando menos lo esperaba.
-            </p>
-
-            <p>
-                Gracias por cada llamada, cada abrazo,
-                cada detalle y cada momento compartido.
-            </p>
-
-            <p>
-                Hemos recorrido un camino hermoso,
-                y aunque todavía quedan kilómetros por recorrer,
-                jamás he dudado de que quiero recorrerlos contigo.
-            </p>
-
-            <p>
-                Hoy puedo decir con certeza que eres una de las mejores cosas que me han pasado.
-            </p>
-
-            <p>
-                Te amo profundamente.
-            </p>
-
-            <p>
-                Y si pudiera volver atrás,
-                volvería a elegirte una y mil veces más.
-            </p>
-
-            <p>
-                Con todo mi amor ❤️
-            </p>
-
-            <p>
-                Ezequiel 🌼
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script src="script.js"></script>
-
-<div id="petals-container"></div>
-
+  </header>
+
+  <main>
+    <section id="servicios" class="section">
+      <h3>Servicios</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>Diseño web</h4>
+          <p>Diseño moderno y adaptable a móviles.</p>
+        </article>
+        <article class="card">
+          <h4>Desarrollo</h4>
+          <p>Implementación limpia con buenas prácticas.</p>
+        </article>
+        <article class="card">
+          <h4>Soporte</h4>
+          <p>Mantenimiento y mejoras continuas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="section section-alt">
+      <h3>Contacto</h3>
+      <p>Escríbenos para empezar tu proyecto.</p>
+      <a class="btn" href="mailto:hola@misitio.com">hola@misitio.com</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> MiSitio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
