@@ -193,7 +193,7 @@ function showCountdown(){
 
 
 const weddingDate =
-new Date("March 15, 2027 00:00:00").getTime();
+new Date("December 18, 2026 00:00:00").getTime();
 
 setInterval(() => {
 
